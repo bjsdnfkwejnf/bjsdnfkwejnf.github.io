@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>寶可夢圖鑑列表</h1>
+    <button onclick="fetchPokemon()">載入寶可夢圖鑑列表-attr屬性方法</button>
+    <button id="btn">載入寶可夢圖鑑列表-js設定事件方法</button>
+    <button id="btn2">載入寶可夢圖鑑列表-addEve新增事件方法</button>
+    <button onclick="fetchPokemon_clear()">清除寶可夢圖鑑列表</button>
+    <div id="container"></div>
+    <script>
+              let container = document.getElementById('container');
+              window.onload = setPokemon();
+              function setPokemon(){
+                  document.getElementsByTagName("h1")[0].innerHTML="Pokemon Album";
+              }
+              function fetchPokemon() {
+                let pokemons = "";
+                for(let i=1;i<899;i++){
+                  let fileName = i.toString().padStart(3, '0');
+                  let pokemonImg = `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png" >`;
+                  pokemons += pokemonImg;    
+                }
+                container.innerHTML = pokemons;
+              }
+              
+              let btn = document.getElementById("btn");
+              btn.onclick = function(){
+                let pokemons = "";
+                for(let i=1;i<899;i++){
+                  let fileName = i.toString().padStart(3, '0');
+                  let pokemonImg = `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png" >`;
+                  pokemons += pokemonImg;    
+                }
+                container.innerHTML = pokemons;
+              }
+              let btn2 = document.getElementById("btn2");
+              btn2.addEventListener("click", function(){
+                let pokemons = "";
+                for(let i=1;i<899;i++){
+                  let fileName = i.toString().padStart(3, '0');
+                  let pokemonImg = `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png" >`;
+                  pokemons += pokemonImg;    
+                }
+                container.innerHTML = pokemons;
+              })
+              function fetchPokemon_clear(){
+                container.innerHTML = "";
+              }
+    </script>
+  </body>
+</html>

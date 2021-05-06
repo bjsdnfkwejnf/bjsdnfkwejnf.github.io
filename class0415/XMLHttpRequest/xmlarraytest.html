@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id='button1'>Request JSON1</button>
+    <div id='msg'></div>
+    <ul id="employees"></ul>
+
+    <script type="module">
+        import { $g } from "../../modules/helpers.js"
+        let msg = $g('#msg');
+        let employees = [];
+        let ul = document.getElementById("employees");
+
+        $g('button').addEventListener('click', () => { msg.innerText = ''; })
+
+        let btn1 = $g('#button1').addEventListener('click', requestJSON1);
+
+        const url = 'https://raw.githubusercontent.com/bjsdnfkwejnf/Filestorage/main/json_objet.json';
+
+        let xhr = new XMLHttpRequest();
+        //Ex1
+        function requestJSON1() {
+            xhr.onload = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    employees = JSON.parse(this.responseText);
+                    let temp = Object.keys(employees);
+                    employees.forEach((emp, index) => {
+                        let li = document.createElement("li");
+                        li.innerHTML = `${emp.firstname},${emp.height},${emp.email},${emp.phone.行動電話},${emp.cars[0]}`
+                        ul.appendChild(li)
+                    });
+                    console.log(this);
+                }
+                else {
+                    msg.textContent = '發⽣錯誤，HTTP response代碼：' +
+                        xhr.status;
+                }
+
+            }
+            xhr.open('GET', url);
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

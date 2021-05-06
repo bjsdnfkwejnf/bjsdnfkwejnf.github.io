@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+
+    <body>
+        <div id="msg">
+
+        </div>
+        <script>
+            let zipcodearray = [];
+
+            fetch("https://raw.githubusercontent.com/donma/TaiwanAddressCityAreaRoadChineseEnglishJSON/master/AllData.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                console.log(typeof data);
+                console.log(data instanceof Array);
+                console.log(Array.isArray(data));
+
+                document.getElementById("msg").innerHTML = JSON.stringify(data);
+
+            
+                // data.forEach((city, index) => {
+                //         // console.log(city.name);
+                //         document.getElementById("msg").innerHTML = JSON.stringify(city.name);
+                //         // console.log(city.ch_name);
+                //         document.getElementById("msg").innerHTML = JSON.stringify(city.ch_name);
+                //         // console.log(city.district);
+                //         city.district.forEach((dt,index) =>{
+                //             // console.log(`${dt.id},${dt.district}`);
+                //             document.getElementById("msg").innerHTML = JSON.stringify(`${dt.id},${dt.district}`);
+                //         })
+                //     });
+             });
+
+        </script>
+    </body>
+
+</html>
