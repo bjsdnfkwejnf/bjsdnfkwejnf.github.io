@@ -5,6 +5,10 @@ body{
     width: 1200px;
     margin: auto;
 }
+.breadcrumb a{
+    text-decoration:none;
+    color: rgba(0, 0, 0, 0.65);;
+}
 .breadcrumb-item+.breadcrumb-item::before {
     content: ">";
 }
@@ -15,8 +19,13 @@ body{
     display: flex;
 }
 .titleword{
+    margin: 0 20px;
     width: 50%;
 }
+.titleword h1{
+    color: rgb(0, 190, 164);;
+    margin: 20px 0;
+} 
 .titleimg{
     width: 50%;
     display: flex;
@@ -26,6 +35,7 @@ body{
     width: 1200px;
     margin: auto;
     display: flex;
+    justify-content: center;
 }
 .buttong button{
     margin: 5px;
