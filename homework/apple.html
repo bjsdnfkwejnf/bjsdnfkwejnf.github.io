@@ -11,22 +11,204 @@
 </head>
 
 <body>
-    <div class="">
-        <button type="button" class="btn btn-dark">IPhone</button>
-        <button type="button" class="btn btn-dark">IPad</button>
-        <button type="button" class="btn btn-dark">MacPro</button>
+
+    <div class="container">
+        <div class="btn-group ">
+            <button type="button" class="btn btn-dark" id="IPhone">IPhone</button>
+            <button type="button" class="btn btn-dark" id="IPad">IPad</button>
+            <button type="button" class="btn btn-dark" id="MacPro">MacPro</button>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div id="product-img">
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div id="color">
+
+                </div>
+                <div id="type">
+
+                </div>
+                <div id="price">
+
+                </div>
+            </div>
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-white-201909?wid=96&hei=96&fmt=jpeg&qlt=80&.v=1566845577171"
+                alt="">
+        </div>
     </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-        crossorigin="anonymous"></script>
     <script>
+        var Product = {
+            IPhone: {
+                Detail: {
+                    productName: 'iPhone 11',
+                    baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;.v=1567022175704'
+                },
+                OutWard: [
+                    { color: '白色', colorurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-white-201909?wid=96&hei=96&fmt=jpeg&qlt=80&.v=1566845577171', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-white-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956148115' },
+                    { color: '黑色', colorurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-black-201909?wid=96&hei=96&fmt=jpeg&qlt=80&.v=1566845576613', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-black-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956144418' },
+                    { color: '綠色', colorurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-green-201909?wid=96&hei=96&fmt=jpeg&qlt=80&.v=1566845578161', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-green-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956144838' },
+                    { color: '黃色', colorurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-yellow-201909?wid=96&hei=96&fmt=jpeg&qlt=80&.v=1566845577261', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-yellow-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1568141245782' },
+                    { color: '紫色', colorurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-purple-201909?wid=96&hei=96&fmt=jpeg&qlt=80&.v=1566845577680', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-purple-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566960958082' },
+                    { color: '紅色', colorurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-red-201909?wid=96&hei=96&fmt=jpeg&qlt=80&.v=1566845577098', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-red-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956144763' }
+
+
+                ],
+                Spec: {
+                    Storge: [
+                        { size: '64GB', fit: 19900 },
+                        { size: '128GB', fit: 21500 },
+                        { size: '256GB', fit: 25000 },
+                    ]
+                }
+            },
+            IPad: {
+                Detail: {
+                    productName: 'iPad',
+                    baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-2020-hero-landing?wid=744&hei=1212&fmt=jpeg&qlt=80&.v=1598913494000'
+                },
+                OutWard: [
+                    { color: '太空灰色', colorUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-spacegray-201903?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1552422652805', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=940&hei=1112&fmt=png-alpha&.v=1598915064000' },
+                    { color: '銀色', colorUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201903?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1552422655664', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=940&hei=1112&fmt=png-alpha&.v=1598915073000' },
+                    { color: '金色', colorUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-gold-201903?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1552422653869', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=940&hei=1112&fmt=png-alpha&.v=1598915069000' },
+                ],
+                Spec: {
+                    Storge: [
+                        { size: '32GB', fit: 9900 },
+                        { size: '128GB', fit: 12900 },
+                    ]
+                }
+            },
+            MacPro: {
+                Detail: {
+                    productName: 'MacPro 13',
+                    baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp13touch-space-select-202005_GEO_TW?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1587460444505'
+                },
+                OutWard: [
+                    { color: '太空灰色', colorUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-spacegray-201903?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1552422652805', imageUrl: './img/mbp13touch-space.png' },
+                    { color: '銀色', colorUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201903?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1552422655664', imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-silver-select-202011_GEO_TW?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1613673937000' },
+                ],
+                Spec: {
+                    Storge: [
+                        { size: '256GB', fit: 51300 },
+                        { size: '512GB', fit: 57300 },
+                        { size: '1TB', fit: 63300 },
+                        { size: '2TB', fit: 75300 },
+                    ]
+                }
+            }
+        };
+
+        //有變化的地方
+        var iphonebtn = document.getElementById('IPhone');
+        var ipadbtn = document.getElementById('IPad');
+        var macprobtn = document.getElementById('MacPro');
+        var productimg = document.getElementById('product-img');
+        var colorarea = document.getElementById('color');
+        var typearea = document.getElementById('type');
+        var pricearea = document.getElementById('price');
+
+        //console.log(iphonebtn.getAttribute('id')===IPhone);
+
+        iphonebtn.onclick = btnclick;
+        ipadbtn.onclick = btnclick;
+        macprobtn.onclick = btnclick;
+        //iphonebtn.addEventListener('click',btnclick);
+        function btnclick() {
+            productimg.innerHTML = '';
+            colorarea.innerHTML = '';
+            typearea.innerHTML = '';
+            pricearea.innerHTML = '';
+
+            let thisatt = this.getAttribute('id');
+            let product = document.createElement('div');
+            let producttitle = document.createElement('h1');
+            let productpic = document.createElement('img');
+
+            producttitle.innerText = thisatt;
+            let i = this.id
+            console.log(IPad.constructor + "<br>");
+            productpic.setAttribute("src", Product.IPhone.Detail.baseImgUrl);
+            product.appendChild(producttitle);
+            product.appendChild(productpic);
+            productimg.appendChild(product);
+
+            let color = document.createElement('div');
+            let colortitle = document.createElement('h1');
+            let coloroutfit = document.createElement('h2');
+
+            colortitle.innerText = '購買';
+            coloroutfit.innerText = '選擇外觀';
+            color.appendChild(colortitle);
+            color.appendChild(coloroutfit);
+            colorarea.appendChild(color);
+
+            for (let item of Product.IPhone.OutWard) {
+                let colorDiv = document.createElement('div');
+                let colorBtn = document.createElement('button');
+                let colorBtnDiv = document.createElement('div');
+                let colorcolor = document.createElement('div');
+                let colorSpan = document.createElement('span');
+
+                colorDiv.classList.add('col-6');
+                colorDiv.classList.add('col-md-4');
+
+                colorBtn.classList.add('btn');
+                colorBtn.classList.add('btn-outline-dark');
+                colorBtn.classList.add('mb-3');
+                colorBtn.classList.add('w-100');
+
+                colorBtnDiv.classList.add('p-4');
+                colorBtnDiv.classList.add('d-flex');
+                //colorBtnDiv.style.boxSizing = 'border-box';
+                colorBtnDiv.classList.add('flex-column');
+                colorBtnDiv.classList.add('justify-content-center');
+                colorBtnDiv.classList.add('align-items-center');
+
+                colorcolor.classList.add('fas');
+                colorcolor.classList.add('fa-circle');
+                colorcolor.classList.add('display-4');
+                colorcolor.style.color = item.colorValue;
+
+                colorSpan.innerText = item.color;
+
+
+                colorcolor.setAttribute('colorUrl', item.imageUrl);
+                colorSpan.setAttribute('imageUrl', item.color);
+
+                colorBtnDiv.appendChild(colorcolor);
+                colorBtnDiv.appendChild(colorSpan);
+                colorBtn.appendChild(colorBtnDiv);
+                colorDiv.appendChild(colorBtn);
+
+                colorarea.appendChild(colorDiv);
+            }
+
+
+            let type = document.createElement('div');
+            let typetitle = document.createElement('h1');
+            typetitle.innerText = '選擇儲存容量';
+            type.appendChild(typetitle);
+            typearea.appendChild(type);
+
+            let price = document.createElement('div');
+            let pricetitle = document.createElement('h1');
+            pricetitle.innerText = '價格';
+            price.appendChild(pricetitle);
+            pricearea.appendChild(price);
+
+        }
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
