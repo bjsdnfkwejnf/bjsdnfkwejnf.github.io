@@ -3,7 +3,7 @@ body{
 }
 .breadcrumb {
     width: 100%;
-    margin: auto;
+    margin: 3%;
 }
 .breadcrumb a{
     text-decoration:none;
@@ -14,20 +14,20 @@ body{
 }
 .title{
     width: 100%;
-    margin: auto;
-    padding: 10px;
+    margin: 5%;
+    box-sizing: border-box;
     display: flex;
 }
 .titleword{
     margin: 0 20px;
-    width: 50%;
+    width: 40%;
 }
 .titleword h1{
     color: rgb(0, 190, 164);;
     margin: 20px 0;
 } 
 .titleimg{
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: row-reverse;
 }
