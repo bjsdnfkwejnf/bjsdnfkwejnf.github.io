@@ -40,6 +40,7 @@ body{
 .pagesbutton{
     width: 100%;
     margin: auto;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
 }
