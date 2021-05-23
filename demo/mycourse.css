@@ -1,5 +1,6 @@
 .myhead{
     width: 100%;
+    margin: 5%;
 }
 .myhead h3{
     color: rgba(0, 0, 0, 0.65);
@@ -21,11 +22,19 @@
     box-sizing: border-box;
 }
 .myclass h4{
+    padding: 0 20px;
     font-size: 23px;
     color: rgba(0, 0, 0, 0.65);
     display: inline-block;
 }
+.myclass a{
+    color: rgb(250, 139, 0);
+}
 .container{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 3% 0;
+}
+
+.container a{
+    color: white;
 }
