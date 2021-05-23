@@ -31,6 +31,12 @@ body{
     display: flex;
     flex-direction: row-reverse;
 }
+.container{
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 .pagesbutton{
     width: 100%;
     margin: auto;
