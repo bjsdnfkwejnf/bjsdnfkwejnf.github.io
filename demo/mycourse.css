@@ -17,10 +17,15 @@
     border-radius: 50%;
 }
 .myclass{
-    padding: 10%;
+    margin: 5%;
+    box-sizing: border-box;
 }
 .myclass h4{
     font-size: 23px;
     color: rgba(0, 0, 0, 0.65);
     display: inline-block;
+}
+.container{
+    box-sizing: border-box;
+    margin: 3% 0;
 }

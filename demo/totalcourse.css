@@ -2,7 +2,9 @@ body{
     background-color: #bebebe;
 }
 .nav{
+    margin-top: 3%;
     justify-content: space-evenly;
+    align-content: center;
 }
 .searchcourse{
     width: 40%;
@@ -52,6 +54,7 @@ body{
 .guess{
     width: 100%;
     padding: 15px;
+    margin-top: 5%;
     display: flex;
     background-color: #fff;
     justify-content: center;
@@ -62,4 +65,10 @@ body{
 .guessimg img{
     max-width:100px; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
     height: auto;
+}
+.container{
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
