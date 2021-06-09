@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-09T15:52:54.212Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="mFPo4bqvxtbLSuiu2CfA" version="14.7.6" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-06-09T15:55:00.993Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36" etag="tuayniVfhjs1gp0EdMLC" version="14.7.6" type="github" pages="5">
   <diagram id="FXAj6MoOpEl0VCX-5JFb" name="Page-1">
     <mxGraphModel dx="946" dy="514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -766,7 +766,7 @@
         <mxCell id="mEC9qLCWu-FSRULliOh2-2" value="沒有" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NclqNfnlCD5jVe88GhE2-5">
           <mxGeometry x="-460" y="660" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mEC9qLCWu-FSRULliOh2-3" value="&lt;span&gt;依排序條件&lt;br&gt;1.最新（上架時間）或&lt;br&gt;2.最多人數或&lt;br&gt;3.最長課時（課程長度）或&lt;br&gt;4.最高評價&lt;br&gt;排序&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NclqNfnlCD5jVe88GhE2-5">
+        <mxCell id="mEC9qLCWu-FSRULliOh2-3" value="&lt;span&gt;課程點擊次數&lt;br&gt;購買最多次&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="NclqNfnlCD5jVe88GhE2-5">
           <mxGeometry x="-220" y="520" width="190" height="90" as="geometry" />
         </mxCell>
         <mxCell id="mEC9qLCWu-FSRULliOh2-4" value="是，渲染畫面" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="NclqNfnlCD5jVe88GhE2-5">
